@@ -1,21 +1,24 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-
-<div class="row mt-5">
-  <div class="col-md-3"></div>
-  <div class="col-md-2">
-    <img class="ot_logo_2" src="{% static 'img/ot_logo.png' %}" alt="OT logo" />
-    <p class="index_sections">Profesores</p>
+{% include "header.html" %}
+<h1 class="index-title">Operación Triunfo 2023</h1>
+<div class="row mt-5 text-center">
+  <div class="col-md-4">
+    <a href="{% url "teacher:teacher_list" %}">
+      <img class="ot_logo_2" src="{% static 'img/ot_logo.png' %}" alt="OT logo" />
+    </a>
+    <p class="title-section">Profesorado</p>
   </div>
-  <div class="col-md-2">
-    <img class="ot_logo_2" src="{% static 'img/ot_logo.png' %}" alt="OT logo" />
-    <p class="index_sections">Concursantes</p>
+  <div class="col-md-4">
+    <a href="{% url "teacher:teacher_list" %}">
+      <img class="ot_logo_2" src="{% static 'img/ot_logo.png' %}" alt="OT logo" />
+    </a>
+    <p class="title-section">Concursantes</p>
   </div>
-  <div class="col-md-2">
-    <img class="ot_logo_2" src="{% static 'img/ot_logo.png' %}" alt="OT logo" />
-    <div class="row">
-      <p class="index_sections">Jurado</p>
-    </div>
+  <div class="col-md-4">
+    <a href="{% url "judge:judge_list" %}">
+      <img class="ot_logo_2" src="{% static 'img/ot_logo.png' %}" alt="OT logo" />
+    </a>
+    <p class="title-section">Jurado</p>
   </div>
-  <div class="col-md-3"></div>
 </div>
 {% endblock %}

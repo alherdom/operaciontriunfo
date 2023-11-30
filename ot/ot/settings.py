@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "bootstrap5",
     "contestant.apps.ContestantConfig",
     "teacher.apps.TeacherConfig",
-    "juried.apps.JuriedConfig",
+    "judge.apps.JudgeConfig",
 ]
 
 MIDDLEWARE = [
