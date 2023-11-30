@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "easy_thumbnails",
+    "bootstrap5",
     "contestant.apps.ContestantConfig",
     "teacher.apps.TeacherConfig",
     "juried.apps.JuriedConfig",

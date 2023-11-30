@@ -1,3 +1,5 @@
 Django==4.2.7
 prettyconf==2.2.1
+psycopg2-binary==2.9.9
 easy-thumbnails
+django-bootstrap-v5
