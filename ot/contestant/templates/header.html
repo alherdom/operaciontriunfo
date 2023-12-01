@@ -9,17 +9,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link bn5" href="{% url "teacher:teacher_list" %}">Teachers</a>
+                    <a class="nav-link bn5" href="{% url "teacher:teachers" %}">Profesorado</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bn5" href="{% url "contestant:contestant_list" %}">Contestants</a>
+                    <a class="nav-link bn5" href="{% url "contestant:contestant_list" %}">Concursantes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bn5" href="{% url "judge:judge_list" %}">Judge</a>
+                    <a class="nav-link bn5" href="{% url "judge:judge_list" %}">Jurado</a>
                 </li>
             </ul>
+            {% include "search.html" %}
         </div>
     </div>
 </nav>
