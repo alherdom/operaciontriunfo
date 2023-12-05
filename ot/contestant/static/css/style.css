@@ -23,6 +23,7 @@ body {
 }
 
 .navbar {
+    font-size: 1.1rem;
     background-color: black !important;
     color: white !important;
 }
@@ -30,6 +31,15 @@ body {
 .navbar-nav .nav-item {
     margin-right: 20px;
     margin-bottom: 10px;
+}
+
+#search-btn {
+    font-size: 1.1rem;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: solid 2px #B13EA2;
 }
 
 .index-title {
@@ -132,15 +142,13 @@ ot_logo:before {
     border-radius: 10px;
 }
 
-.teacher-image {
-    height: 200px;
-    width: 200px;
+.avatar-image {
     border-radius: 100%;
-    border: solid 2px white;
+    border: solid 4px #B13EA2;
     margin: 50px 50px 50px 50px;
     transition: 0.4s ease;
 }
 
-.teacher-image:hover {
+.avatar-image:hover {
     transform: scale(1.1);
 }

@@ -7,5 +7,6 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, "index.html")
 
 
-def contestant_list(request: HttpRequest) -> HttpResponse:
-    return render(request, "list.html")
+def contestants(request: HttpRequest) -> HttpResponse:
+    contestants = Contestant.objects.all()
+    return render(request, "contestants.html", dict(contestants=contestants))

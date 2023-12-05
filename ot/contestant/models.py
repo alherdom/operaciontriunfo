@@ -2,24 +2,27 @@ from django.db import models
 
 
 class MusicStyle(models.Model):
-    name = models.CharField(max_length=20)
-    slug = models.SlugField(max_length=20)
+    name = models.CharField(max_length=50)
+    slug = models.SlugField(max_length=100)
+
+    def __str__(self) -> str:
+        return f"{self.name}"
 
 
 class Contestant(models.Model):
-    first_name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=20)
-    slug = models.SlugField(max_length=20)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    slug = models.SlugField(max_length=100)
     birthdate = models.DateField()
-    city = models.CharField(max_length=20)
-    job = models.CharField(max_length=20)
-    hobbies = models.CharField(max_length=20)
-    nationality = models.CharField(max_length=20)
+    city = models.CharField(max_length=250)
+    job = models.CharField(max_length=250)
+    hobbies = models.CharField(max_length=250)
+    nationality = models.CharField(max_length=50)
     avatar = models.ImageField()
     music_style = models.ForeignKey(MusicStyle, on_delete=models.CASCADE)
 
     class Meta:
-        ordering = ["first_name"]
+        ordering = ["id"]
         indexes = [models.Index(fields=["first_name"])]
 
     def __str__(self) -> str:
