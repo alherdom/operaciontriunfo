@@ -1,9 +1,16 @@
-{% extends "base.html" %} {% load thumbnail %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load static %}
+{% block content %}
 {% include "header.html" %}
 <div class="row mt-5 text-center">
   <div class="row mt-5"></div>
   {% for contestant in contestants %}
-  <div class="col-md-3 col-sm-6 mt-5"><a href=""><img class="cont-image" src="{% thumbnail contestant.avatar 350x350 %}" alt="concursante image"></a></div>
+  <div class="col-md-3 col-sm-6 mt-5">
+    <a href="">
+      <img class="cont-image" src="{% thumbnail contestant.avatar 350x350 %}" alt="concursante image"/></a>
+    <p class="names">{{ contestant.first_name }} {{ contestant.last_name }}</p>
+  </div>
   {% endfor %}
 </div>
 {% endblock %}
