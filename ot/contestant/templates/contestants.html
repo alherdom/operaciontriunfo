@@ -3,7 +3,7 @@
 <div class="row mt-5 text-center">
   <div class="row mt-5"></div>
   {% for contestant in contestants %}
-  <div class="col-md-3 col-sm-4 mt-5"><a href=""><img class="avatar-image" src="{% thumbnail contestant.avatar 250x250 %}" alt="concursante image"></a></div>
+  <div class="col-md-3 col-sm-6 mt-5"><a href=""><img class="cont-image" src="{% thumbnail contestant.avatar 350x350 %}" alt="concursante image"></a></div>
   {% endfor %}
 </div>
 {% endblock %}

@@ -22,7 +22,7 @@ class Contestant(models.Model):
     music_style = models.ForeignKey(MusicStyle, on_delete=models.CASCADE)
 
     class Meta:
-        ordering = ["id"]
+        ordering = ["first_name"]
         indexes = [models.Index(fields=["first_name"])]
 
     def __str__(self) -> str:

@@ -8,25 +8,25 @@ class ContestantAdmin(admin.ModelAdmin):
         "id",
         "first_name",
         "last_name",
+        "avatar",
         "slug",
         "birthdate",
         "city",
         "job",
         "hobbies",
         "nationality",
-        "avatar",
         "music_style",
     ]
     list_editable = [
         "first_name",
         "last_name",
+        "avatar",
         "slug",
         "birthdate",
         "city",
         "job",
         "hobbies",
         "nationality",
-        "avatar",
         "music_style",
     ]
     prepopulated_fields = dict(slug=("first_name", "last_name"))

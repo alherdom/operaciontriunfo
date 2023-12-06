@@ -8,7 +8,7 @@ class Judge(models.Model):
     avatar = models.ImageField()
 
     class Meta:
-        ordering = ["first_name"]
+        ordering = ["id"]
         indexes = [models.Index(fields=["first_name"])]
 
     def __str__(self) -> str:
