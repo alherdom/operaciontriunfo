@@ -3,15 +3,16 @@
 {% load static %}
 {% block content %}
 {% include "header.html" %}
-<div class="row mt-5 text-center">
-  <div class="row mt-5"></div>
+<h1 class="index-title" style="color:black;">O</h1>
+<div class="my-row">
   {% for judge in judges %}
-  <div class="col-md-4 col-sm-6 mt-5"><a href=""><img class="judge-image" src="{{ judge.avatar.url }}" alt="judge image"></a>
-  <p class="names">{{ judge.first_name }} {{ judge.last_name }}</p>
+  <div>
+    <a href="{{ judge.get_absolute_url }}">
+      <img class="judge-image" src="{{ judge.avatar.url }}" alt="judge image">
+    </a>
+  <p class="title-section">{{ judge.first_name }} {{ judge.last_name }}</p>
   </div>
   {% endfor %}
-  <div class="row mt-5"></div>
-  <div class="row mt-5"></div>
-  <div class="row mt-5"></div>
 </div>
+<div class="mt-5"></div>
 {% endblock %}

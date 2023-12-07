@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+<div class="my-row-detail">
+    <div>
+        <img class="teach-image" src="{% thumbnail contestant.avatar 600x600 %}" alt="teacher image">
+    </div>
+    <div>
+        <p class="title-section">{{ contestant.first_name }} {{ contestant.last_name }}</p>
+        <ul class="contestant-description">
+            <li>
+               Fecha de nacimiento: {{ contestant.birthdate }}
+            </li>
+            <li>
+                Ciudad: {{ contestant.city }}
+            </li>
+            <li>
+               Profesión: {{ contestant.job }}
+            </li>
+            <li>
+               Hobbies: {{ contestant.hobbies }}
+            </li>
+            <li>
+                Nacionalidad: {{ contestant.nationality }}
+            </li>
+            <li>
+                Estilo musical: {{ contestant.music_style }}
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="mt-5"></div>
+{% endblock %}

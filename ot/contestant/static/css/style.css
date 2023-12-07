@@ -9,30 +9,12 @@ body {
     background-color: black;
 }
 
-.row-index {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 50px;
-}
 
 #ot_logo {
     height: 50px;
     border-radius: 100%;
 }
 
-.ot_logo_2 {
-    height: 350px;
-    width: 600px;
-    object-fit: cover;
-    border-radius: 25px;
-    transition: 0.2s ease;
-    margin: 0px 0px 50px 0px;
-}
-
-.ot_logo_2:hover {
-    transform: scale(1.1);
-}
 
 .navbar {
     font-size: 1.4rem;
@@ -46,40 +28,16 @@ body {
     margin-bottom: 10px;
 }
 
-#search-btn {
-    font-size: 1.4rem;
-    width: 50px !important;
-    padding-right: 100px;
-}
-
 .form-control {
-    border-radius: 10px;
-    border: solid 2px #B13EA2;
-    text-align: center;
-}
-
-.index-title {
-    margin-top: 150px;
-    margin-bottom: 80px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 4.5em;
-    color: white;
-}
-
-.title-section {
-    margin-top: -20px;
-    font-size: 1.8em;
-    font-weight: bold;
-    color: white;
-    text-align: center;
+    text-align: start;
+    font-size: .9em;
+    width: auto;
 }
 
 .bn5 {
     padding: 0.6em 2em;
     border: none;
     outline: none;
-    color: rgb(255, 255, 255);
     background: black;
     cursor: pointer;
     position: relative;
@@ -89,8 +47,11 @@ body {
     text-align: center;
 }
 
-.bn5:before,
-ot_logo:before {
+.bn5:hover {
+    color: white !important;
+}
+
+.bn5:before {
     content: "";
     background: linear-gradient(45deg,
             #ff0000,
@@ -130,10 +91,6 @@ ot_logo:before {
     }
 }
 
-.bn5:active {
-    color: black;
-}
-
 .bn5:active:after {
     background: black;
 }
@@ -154,37 +111,82 @@ ot_logo:before {
     border-radius: 10px;
 }
 
+.index-title {
+    margin-top: 120px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.5em;
+    color: white;
+    color: #1a98ff;
+}
+
+.my-row {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.my-row-detail {
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.my-row-detail span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: violet;
+}
+
+.title-section {
+    margin-top: -30px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    color: #1a98ff;
+    text-align: center;
+}
+
+.index-image {
+    height: 350px;
+    width: 600px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: 0.2s ease;
+    margin: 0px 0px 50px 0px;
+}
+
+.judge-image {
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: 0.2s ease;
+    margin: 0px 0px 50px 0px;
+}
+
 .cont-image {
     border-radius: 25px;
     margin: 50px 50px 50px 50px;
     transition: 0.2s ease;
 }
 
-.profe-image {
+.teach-image {
     border-radius: 25px;
     margin: 50px 50px 50px 50px;
     transition: 0.2s ease;
 }
 
+.index-image:hover,
 .cont-image:hover,
-.profe-image:hover,
+.teach-image:hover,
 .judge-image:hover {
-    transform: scale(1.2);
-    object-fit: scale-down;
-}
-
-.judge-image {
-    border-radius: 25px;
-    margin: 50px 50px 50px 50px;
-    height: 300px;
-    width: auto;
-    transition: 0.2s ease;
-}
-
-.names {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
+    transform: scale(1.1);
 }
 
 .footer-line {
@@ -205,4 +207,27 @@ ot_logo:before {
 
 .footer-line a:hover {
     border-bottom: 2px solid white;
+}
+
+.description {
+    font-size: 1.2em;
+    height: 500px;
+    width: 450px;
+    font-weight: bold;
+    color: white;
+    text-align: justify;
+}
+
+.contestant-description {
+    font-size: 1.2em;
+    height: 500px;
+    width: 450px;
+    font-weight: bold;
+    color: white;
+    text-align: justify;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 10px;
 }

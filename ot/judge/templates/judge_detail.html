@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+<div class="my-row-detail">
+    <div>
+        <img class="judge-image" src="{{ judge.avatar.url }}" alt="judge image">
+    </div>
+    <div>
+        <p class="title-section">{{ judge.first_name }} {{ judge.last_name }}</p>
+        <p class="description">{{ judge.description }}</p>
+    </div>
+</div>
+<div class="mt-5"></div>
+{% endblock %}

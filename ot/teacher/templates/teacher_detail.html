@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+<div class="my-row-detail">
+    <div>
+        <img class="teach-image" src="{{ teacher.avatar.url }}" alt="teacher image">
+    </div>
+    <div>
+        <p class="title-section">{{ teacher.first_name }} {{ teacher.last_name }}</p>
+        <p class="description">{{ teacher.description }}<br><br><span>Profesor/a de {{ teacher.subject }}.</span></p>
+    </div>
+</div>
+<div class="mt-5"></div>
+{% endblock %}

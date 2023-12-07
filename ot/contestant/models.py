@@ -1,5 +1,7 @@
 from django.db import models
 
+from django.urls import reverse
+
 
 class MusicStyle(models.Model):
     name = models.CharField(max_length=50)
@@ -12,7 +14,7 @@ class MusicStyle(models.Model):
 class Contestant(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    slug = models.SlugField(max_length=100)
+    slug = models.SlugField(max_length=100, unique=True)
     birthdate = models.DateField()
     city = models.CharField(max_length=250)
     job = models.CharField(max_length=250)
@@ -27,3 +29,8 @@ class Contestant(models.Model):
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}"
+
+    def get_absolute_url(self) -> str:
+        return reverse(
+            "contestant:contestant_detail", kwargs=dict(contestant_slug=self.slug)
+        )

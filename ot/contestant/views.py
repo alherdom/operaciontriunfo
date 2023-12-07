@@ -10,3 +10,7 @@ def index(request: HttpRequest) -> HttpResponse:
 def contestants(request: HttpRequest) -> HttpResponse:
     contestants = Contestant.objects.all()
     return render(request, "contestants.html", dict(contestants=contestants))
+
+def contestant_detail(request: HttpRequest, contestant_slug: str) -> HttpResponse:
+    contestant = Contestant.objects.get(slug=contestant_slug)
+    return render(request, "contestant_detail.html", dict(contestant=contestant))

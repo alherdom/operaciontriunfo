@@ -3,22 +3,24 @@
 {% block content %}
 {% include "header.html" %}
 <h1 class="index-title">Operación Triunfo 2023</h1>
-<div class="row-index">
+<div class="my-row">
   <div>
     <a href="{% url "teacher:teachers" %}">
-      <img class="ot_logo_2" src="{% static 'img/teachers.jpg' %}" alt="teachers image"/></a>
+      <img class="index-image" src="{% static 'img/teachers.jpg' %}" alt="teachers image"/></a>
     <p class="title-section">Profesores</p>
   </div>  
   <div>
         <a href="{% url "contestant:contestants" %}">
-      <img class="ot_logo_2" src="{% static 'img/contestant.jpeg' %}" alt="contestants image"/></a>
+      <img class="index-image" src="{% static 'img/contestant.jpeg' %}" alt="contestants image"/></a>
     <p class="title-section">Concursantes</p>
   </div>
   <div>
     <a href="{% url "judge:judges" %}">
-      <img class="ot_logo_2" src="{% static 'img/judges.webp' %}" alt="judges image" />
+      <img class="index-image" src="{% static 'img/judges.webp' %}" alt="judges image" />
     </a>
     <p class="title-section">Jueces</p>
   </div>
 </div>
+<div class="mt-5"></div>
+<div class="mt-5"></div>
 {% endblock %}
