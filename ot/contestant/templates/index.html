@@ -1,22 +1,22 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 {% include "header.html" %}
 <h1 class="index-title">Operación Triunfo 2023</h1>
-<div class="row mt-5 text-center">
-  <div class="col-md-4">
+<div class="row-index">
+  <div>
     <a href="{% url "teacher:teachers" %}">
-      <img class="ot_logo_2" src="{% static 'img/teachers.jpg' %}" alt="OT logo" />
-    </a>
+      <img class="ot_logo_2" src="{% static 'img/teachers.jpg' %}" alt="teachers image"/></a>
     <p class="title-section">Profesores</p>
-  </div>
-  <div class="col-md-4">
-    <a href="{% url "teacher:teachers" %}">
-      <img class="ot_logo_2" src="{% static 'img/contestant.jpeg' %}" alt="OT logo" />
-    </a>
+  </div>  
+  <div>
+        <a href="{% url "contestant:contestants" %}">
+      <img class="ot_logo_2" src="{% static 'img/contestant.jpeg' %}" alt="contestants image"/></a>
     <p class="title-section">Concursantes</p>
   </div>
-  <div class="col-md-4">
+  <div>
     <a href="{% url "judge:judges" %}">
-      <img class="ot_logo_2" src="{% static 'img/judges.webp' %}" alt="OT logo" />
+      <img class="ot_logo_2" src="{% static 'img/judges.webp' %}" alt="judges image" />
     </a>
     <p class="title-section">Jueces</p>
   </div>

@@ -20,7 +20,11 @@
                     <a class="nav-link bn5" href="{% url "judge:judges" %}">Jueces</a>
                 </li>
             </ul>
-            {% include "search.html" %}
+            </ul class="navbar-nav ms-auto">
+            <li class="nav-item" style="list-style-type: none;">
+                {% include "search.html" %}
+            </li>
+            <ul>
         </div>
     </div>
 </nav>
