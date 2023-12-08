@@ -81,8 +81,11 @@ WSGI_APPLICATION = "ot.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "ot2023",
+        "USER": "ot2023",
+        "PASSWORD": "78644905Q",
+        "HOST": "localhost",
     }
 }
 
