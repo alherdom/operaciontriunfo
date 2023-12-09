@@ -7,11 +7,10 @@
   {% for contestant in contestants %}
   <div>
     <a href=" {{ contestant.get_absolute_url }} ">
-      <img class="cont-image" src="{% thumbnail contestant.avatar 350x350 %}" alt="concursante image"/></a>
-      <p class="title-section2">{{ contestant.first_name }} {{ contestant.last_name }}</p>
+      <img class="cont-image" src="{% thumbnail contestant.avatar 350x350 %}" alt="concursante image" />
+      <p class="title-section2">{{ contestant.first_name }}</p>
+    </a>
   </div>
   {% endfor %}
 </div>
-<div class="mt-5"></div>
-<div class="mt-5"></div>
 {% endblock %}

@@ -2,25 +2,25 @@
 {% load static %}
 {% block content %}
 {% include "header.html" %}
-<h1 class="index-title">Operación Triunfo 2023</h1>
 <div class="my-row">
+  <img class="banner" src="{% static 'img/banner.png' %}" alt="banner image">
   <div>
     <a href="{% url "teacher:teachers" %}">
-      <img class="index-image" src="{% static 'img/teachers.jpg' %}" alt="teachers image"/></a>
-    <p class="title-section2">Profesores</p>
-  </div>  
+      <img class="index-image" src="{% static 'img/teachers.jpg' %}" alt="teachers image" />
+      <p class="title-section2">Profesores</p>
+    </a>
+  </div>
   <div>
-        <a href="{% url "contestant:contestants" %}">
-      <img class="index-image" src="{% static 'img/contestant.jpeg' %}" alt="contestants image"/></a>
-    <p class="title-section2">Concursantes</p>
+    <a href="{% url "contestant:contestants" %}">
+      <img class="index-image" src="{% static 'img/contestant.jpeg' %}" alt="contestants image" />
+      <p class="title-section2">Concursantes</p>
+    </a>
   </div>
   <div>
     <a href="{% url "judge:judges" %}">
       <img class="index-image" src="{% static 'img/judges.webp' %}" alt="judges image" />
+      <p class="title-section2">Jueces</p>
     </a>
-    <p class="title-section2">Jueces</p>
   </div>
 </div>
-<div class="mt-5"></div>
-<div class="mt-5"></div>
 {% endblock %}

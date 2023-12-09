@@ -7,18 +7,25 @@ body {
     /* background: #B13EA2;
     background: linear-gradient(to right, #B13EA2 15%, #121FCF 100%); */
     background-color: black;
+    background-color: #00050d;
 }
 
+.banner {
+    margin-top: 30px;
+    border-radius: 25px;
+    width: 96vw;
+    height: auto;
+}
 
 #ot_logo {
     height: 50px;
     border-radius: 100%;
 }
 
-
 .navbar {
     font-size: 1.4rem;
     background-color: black !important;
+    background-color: #00050d !important;
     color: white !important;
 }
 
@@ -39,6 +46,7 @@ body {
     border: none;
     outline: none;
     background: black;
+    background: #00050d;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -93,6 +101,7 @@ body {
 
 .bn5:active:after {
     background: black;
+    background: #00050d;
 }
 
 .bn5:hover:before {
@@ -106,37 +115,37 @@ body {
     width: 100%;
     height: 100%;
     background: black;
+    background: #00050d;
     left: 0;
     top: 0;
     border-radius: 10px;
 }
 
-.index-title {
-    margin-top: 120px;
-    margin-bottom: 70px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 4.5em;
-    background: linear-gradient(red, blue);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
 .my-row {
     margin-top: 70px;
+    margin-bottom: 70px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 50px;
+    justify-content: center;
+    gap: 20px;
 }
+
+.my-row-judges {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 
 .my-row-detail {
     margin-top: 200px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 50px;
+    justify-content: center;
+    gap: 40px;
 }
 
 .my-row-detail span {
@@ -145,26 +154,30 @@ body {
     color: violet;
 }
 
-.title-section {
-    margin-top: -30px;
-    font-size: 1.8em;
-    font-weight: bold;
+a {
     color: white;
+    text-decoration: none;
+}
+
+.title-section {
+    margin-top: -25px;
+    font-size: 2em;
+    font-weight: bolder;
     color: #1a98ff;
     text-align: center;
 }
 
 .title-section2 {
-    margin-top: -30px;
-    font-size: 1.8em;
-    font-weight: bold;
+    margin-top: -25px;
+    font-size: 2em;
+    font-weight: bolder;
     color: white;
     text-align: center;
 }
 
 .index-image {
-    height: 350px;
     width: 600px;
+    height: 350px;
     object-fit: cover;
     border-radius: 25px;
     transition: 0.2s ease;
@@ -172,8 +185,8 @@ body {
 }
 
 .judge-image {
-    height: 400px;
-    width: 600px;
+    width: 700px;
+    height: auto;
     object-fit: cover;
     border-radius: 25px;
     transition: 0.2s ease;
@@ -192,31 +205,28 @@ body {
     transition: 0.2s ease;
 }
 
-.index-image:hover,
 .cont-image:hover,
 .teach-image:hover,
+.index-image:hover,
 .judge-image:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .footer-line {
     width: 100%;
     text-align: center;
     height: 100px;
-    margin-top: 50px;
+    margin-top: 150px;
     font-weight: bold;
     padding-top: 20px;
     color: white !important;
     background-color: black !important;
+    background-color: #00050d !important;
 }
 
 .footer-line a {
     color: white !important;
     text-decoration: none;
-}
-
-.footer-line a:hover {
-    border-bottom: 2px solid white;
 }
 
 .description {
@@ -240,4 +250,9 @@ body {
 ul li {
     list-style: none;
     margin-bottom: 10px;
+}
+
+.footer-img {
+    width: 150px;
+    height: auto;
 }
