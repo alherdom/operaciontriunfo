@@ -22,7 +22,9 @@
             </ul>
             </ul class="navbar-nav ms-auto">
             <li class="nav-item bn5" style="list-style-type: none;">
-                {% include "search.html" %}
+               <form method="get" action= {% url "contestant:search" %} >
+                    <input type="text" name="input" placeholder="Nombre o estilo musical">
+                </form> 
             </li>
             <ul>
         </div>

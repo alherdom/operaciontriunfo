@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "contestant.apps.ContestantConfig",
     "teacher.apps.TeacherConfig",
     "judge.apps.JudgeConfig",
+    "django.contrib.postgres",
 ]
 
 MIDDLEWARE = [

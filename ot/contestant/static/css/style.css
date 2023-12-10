@@ -4,8 +4,6 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: "Lato", sans-serif;
-    /* background: #B13EA2;
-    background: linear-gradient(to right, #B13EA2 15%, #121FCF 100%); */
     background-color: black;
     background-color: #00050d;
 }
@@ -13,7 +11,7 @@ body {
 .banner {
     margin-top: 30px;
     border-radius: 25px;
-    width: 96vw;
+    width: 88%;
     height: auto;
 }
 
@@ -205,6 +203,15 @@ a {
     transition: 0.2s ease;
 }
 
+.search-image {
+    width: 450px;
+    height: 510px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin: 50px 50px 50px 50px;
+    transition: 0.2s ease;
+}
+
 .cont-image:hover,
 .teach-image:hover,
 .index-image:hover,
@@ -253,6 +260,6 @@ ul li {
 }
 
 .footer-img {
-    width: 150px;
+    width: 120px;
     height: auto;
 }

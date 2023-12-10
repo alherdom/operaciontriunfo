@@ -1,3 +1,23 @@
-<form class="d-flex" role="search">
-  <input class="form-control" type="search" placeholder="Nombre o estilo musical 🔍">
-</form>
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load static %}
+{% block title %}Search{% endblock %}
+{% block content %}
+{% include "header.html" %}
+  {% with results.count as total_results %}
+    Found {{ total_results }} result{{ total_results|pluralize }}
+  {% endwith %}
+<div class="my-row">
+  {% for result in results %}
+  <div>
+    <a href=" {{ result.get_absolute_url }} ">
+      <img class="search-image" src="{{ result.avatar.url }}" alt="concursante image" />
+      <p class="title-section2">{{ result.first_name }}</p>
+      <p class="title-section2">{{ result.music_style }}</p>
+    </a>
+  </div>
+  {% empty %}
+    <p class="title-section2 mt-5">No se encontraron resultados</p>
+  {% endfor %}
+</div>
+{% endblock %}
