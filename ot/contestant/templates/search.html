@@ -10,7 +10,7 @@
 <div class="my-row">
   {% for result in results %}
   <div>
-    <a href=" {{ result.get_absolute_url }} ">
+    <a href="{{ result.get_absolute_url }}">
       <img class="search-image" src="{{ result.avatar.url }}" alt="concursante image" />
       <p class="title-section2">{{ result.first_name }} {{ result.last_name }}</p>
       <p class="title-section2">{{ result.role }} {{ result.subject }}</p>
