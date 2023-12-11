@@ -33,10 +33,9 @@ body {
     margin-bottom: 10px;
 }
 
-.form-control {
-    text-align: start;
-    font-size: .9em;
-    width: auto;
+.selected {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #00050d;
+    color: white !important;
 }
 
 .bn5 {
@@ -128,16 +127,6 @@ body {
     gap: 20px;
 }
 
-.my-row-judges {
-    margin-top: 70px;
-    margin-bottom: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-
 .my-row-detail {
     margin-top: 200px;
     display: flex;
@@ -204,14 +193,15 @@ a {
 }
 
 .search-image {
-    width: 450px;
-    height: 510px;
+    width: 250px;
+    height: 350px;
     object-fit: cover;
     border-radius: 25px;
     margin: 50px 50px 50px 50px;
     transition: 0.2s ease;
 }
 
+.search-image:hover,
 .cont-image:hover,
 .teach-image:hover,
 .index-image:hover,
@@ -262,4 +252,76 @@ ul li {
 .footer-img {
     width: 120px;
     height: auto;
+}
+
+.input-search {
+    color: white !important;
+    width: 140px;
+    background-color: #00050d;
+    border: none;
+}
+
+.input-search:focus {
+    background-color: #00050d;
+    border: none;
+    outline: none;
+    color: white !important;
+    opacity: 1;
+}
+
+.input-search:focus::placeholder,
+.input-search:hover::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.search-help {
+    display: none;
+    position: absolute;
+    padding-top: 15px;
+    margin-left: -85px;
+    font-size: 0.7em;
+    width: 450px;
+    z-index: 1;
+}
+
+.arrow-before {
+    width: 0px;
+    height: 0px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid black;
+    font-size: 0px;
+    line-height: 0px;
+    top: 6px;
+    left: 145px;
+    position: relative;
+}
+
+.arrow-after {
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #00a4dd;
+    font-size: 0px;
+    line-height: 0px;
+    top: 1px;
+    left: 145px;
+    position: relative;
+}
+
+.help-text {
+    color: #00a4dd;
+    border-radius: 25px;
+    width: 305px;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid #00a4dd;
+}
+
+@media screen and (max-width: 995px) {
+    .search-help {
+        display: none !important;
+    }
 }

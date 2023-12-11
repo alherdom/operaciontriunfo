@@ -11,19 +11,24 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link bn5" href="{% url "teacher:teachers" %}">Profesores</a>
+                    <a {% if section == 'teachers' %} class="nav-link bn5 selected" {% endif %} class="nav-link bn5" href="{% url "teacher:teachers" %}">Profesores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bn5" href="{% url "contestant:contestants" %}">Concursantes</a>
+                    <a {% if section == 'contestants' %} class="nav-link bn5 selected" {% endif %} class="nav-link bn5" href="{% url "contestant:contestants" %}">Concursantes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bn5" href="{% url "judge:judges" %}">Jueces</a>
+                    <a {% if section == 'judges' %} class="nav-link bn5 selected" {% endif %} class="nav-link bn5" href="{% url "judge:judges" %}">Jurado</a>
                 </li>
             </ul>
             </ul class="navbar-nav ms-auto">
-            <li class="nav-item bn5" style="list-style-type: none;">
-               <form method="get" action= {% url "contestant:search" %} >
-                    <input type="text" name="input" placeholder="Nombre o estilo musical">
+            <li class="nav-item" style="list-style-type: none;">
+               <form class="nav-link bn5" method="get" action= {% url "contestant:search" %} >
+                    <input id="inputSearch" data-toggle="popover" data-content="Buscar por nombre, género, asignatura" class="input-search" type="text" name="input" placeholder="Búsqueda  🔍">
+                    <div id="searchHelp" class="search-help">
+                        <div class="arrow-before"></div>
+                        <div class="arrow-after"></div>
+                        <div class="help-text">Buscar por nombre, género, o asignatura</div>
+                    </div>
                 </form> 
             </li>
             <ul>

@@ -22,6 +22,7 @@ class Contestant(models.Model):
     nationality = models.CharField(max_length=50)
     avatar = models.ImageField()
     music_style = models.ForeignKey(MusicStyle, on_delete=models.CASCADE)
+    role = models.CharField(max_length=20)
 
     class Meta:
         ordering = ["first_name"]

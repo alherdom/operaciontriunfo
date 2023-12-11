@@ -5,7 +5,7 @@ from .models import Teacher
 
 def teachers(request: HttpRequest) -> HttpResponse:
     teachers = Teacher.objects.all()
-    return render(request, "teachers.html", dict(teachers=teachers))
+    return render(request, "teachers.html", dict(teachers=teachers, section="teachers"))
 
 
 def teacher_detail(request: HttpRequest, teacher_slug: str) -> HttpResponse:

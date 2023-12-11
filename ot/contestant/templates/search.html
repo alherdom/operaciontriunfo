@@ -12,7 +12,8 @@
   <div>
     <a href=" {{ result.get_absolute_url }} ">
       <img class="search-image" src="{{ result.avatar.url }}" alt="concursante image" />
-      <p class="title-section2">{{ result.first_name }}</p>
+      <p class="title-section2">{{ result.first_name }} {{ result.last_name }}</p>
+      <p class="title-section2">{{ result.role }} {{ result.subject }}</p>
       <p class="title-section2">{{ result.music_style }}</p>
     </a>
   </div>

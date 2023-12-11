@@ -8,6 +8,7 @@ class Judge(models.Model):
     job = models.CharField(max_length=20)
     avatar = models.ImageField()
     description = models.CharField(max_length=1000)
+    role = models.CharField(max_length=20)
 
     class Meta:
         ordering = ["id"]

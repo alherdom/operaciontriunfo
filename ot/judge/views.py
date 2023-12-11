@@ -5,7 +5,7 @@ from .models import Judge
 
 def judges(request: HttpRequest) -> HttpResponse:
     judges = Judge.objects.all()
-    return render(request, "judges.html", dict(judges=judges))
+    return render(request, "judges.html", dict(judges=judges, section="judges"))
 
 
 def judge_detail(request: HttpRequest, judge_slug: str) -> HttpResponse:
