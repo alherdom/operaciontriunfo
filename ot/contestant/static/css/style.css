@@ -278,8 +278,8 @@ ul li {
 .search-help {
     display: none;
     position: absolute;
-    padding-top: 15px;
-    margin-left: -85px;
+    margin-top: -48px;
+    margin-left: -370px;
     font-size: 0.7em;
     width: 450px;
     z-index: 1;
@@ -303,21 +303,22 @@ ul li {
     height: 0px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #00a4dd;
+    border-bottom: 8px solid gainsboro;
     font-size: 0px;
     line-height: 0px;
-    top: 1px;
-    left: 145px;
+    top: 22px;
+    left: 300px;
     position: relative;
+    rotate: 90deg;
 }
 
 .help-text {
-    color: #00a4dd;
-    border-radius: 25px;
+    color: gainsboro;
+    border-radius: 10px;
     width: 305px;
     text-align: center;
     padding: 5px;
-    border: 2px solid #00a4dd;
+    border: 2px solid gainsboro;
 }
 
 @media screen and (max-width: 995px) {

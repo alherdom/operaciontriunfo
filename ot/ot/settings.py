@@ -83,13 +83,12 @@ WSGI_APPLICATION = "ot.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "ot2023",
-        "USER": "ot2023",
-        "PASSWORD": "78644905Q",
-        "HOST": "localhost",
+        "NAME": config("DB_NAME"),
+        "USER": config("DB_USERNAME"),
+        "PASSWORD": config("DB_PASSWORD"),
+        "HOST": config("DB_HOST"),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
