@@ -24,16 +24,12 @@ def contestant_detail(request: HttpRequest, contestant_slug: str) -> HttpRespons
 
 
 def get_similarity_queryset(model, fields, query):
-    return model.objects.annotate(
-        similarity=sum(TrigramSimilarity(field, query) for field in fields)
-    ).filter(similarity__gt=0.3)
+    return model.objects.annotate(similarity=sum(TrigramSimilarity(field, query) for field in fields)).filter(similarity__gt=0.3)
 
 
 def search(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("input", "").lower()
-    contestants = get_similarity_queryset(
-        Contestant, ["first_name", "music_style__name"], query
-    )
+    contestants = get_similarity_queryset(Contestant, ["first_name", "music_style__name"], query)
     teachers = get_similarity_queryset(Teacher, ["first_name", "subject"], query)
     judges = get_similarity_queryset(Judge, ["first_name"], query)
     results = chain(contestants, teachers, judges)
